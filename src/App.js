@@ -1,25 +1,33 @@
 import logo from './logo.svg';
+import Head from './components/Functional.js'
 import './App.css';
+import './temp.css'
+import Toggle from './components/Toggle';
+// import  Btn from './components/btn.js'
+import Btn from './components/btn'
+import Guess  from './components/Guess';
+import ClassCom from './components/ClassCom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <div className="parent" style={{color:"red"}}>
+
+ <div className='Player1'>
+<h1 number='0'>Points </h1>
+<Btn number='6'> Click</Btn>
+ </div>
+ <div className='Player2'>
+ <Toggle></Toggle>
+<Btn number='6'> Click</Btn>
+ </div>
+
+ <Guess></Guess>
+ <ClassCom></ClassCom>
+ 
+  </div>
+  )
+  ;
+
 }
 
 export default App;
